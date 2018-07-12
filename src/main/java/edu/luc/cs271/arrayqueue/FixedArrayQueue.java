@@ -37,7 +37,7 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
             return false;
         }
         size++;
-        rear = (rear + 1) % capacity; data[rear] = item;
+        rear = (rear + 1) % capacity; data[rear] = obj;
         return true;
 
 
@@ -78,14 +78,13 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
         @Override
         public List<E> asList() {
             List<E> queueList = new ArrayList<>(this.capacity);
-            for (int i = front i)
-                while (front != null) {
-                    queueList.add(front);
-                    front = front;
-                }
-            return queueList;
+            for (int i : new int[]{1, 2, 3})
+                queueList.add(i);
+    }
 
-            return Arrays.asList();
+            return List<E>;
+
+
         }
     }
 
