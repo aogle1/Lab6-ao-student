@@ -78,7 +78,7 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
         @Override
         public List<E> asList() {
             List<E> queueList = new ArrayList<>(this.capacity);
-            for (int i : new int[]{1, 2, 3})
+            for (int i : this.data)
                 queueList.add(i);
     }
 
@@ -86,6 +86,6 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
 
 
         }
-    }
+
 
 // TODO implement using an ArrayList preallocated with the right size
