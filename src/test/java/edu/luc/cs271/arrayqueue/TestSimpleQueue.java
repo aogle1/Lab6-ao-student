@@ -133,3 +133,4 @@ public class TestSimpleQueue {
     assertEquals(Arrays.asList(value2, value3), list);
   }
 }
+

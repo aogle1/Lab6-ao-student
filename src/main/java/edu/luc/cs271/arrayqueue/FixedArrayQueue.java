@@ -36,9 +36,9 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
         if (size == capacity) {
             return false;
         }
-        this.rear = (this.rear + 1) % this.capacity;
-        this.data[this.data] = item;
-        this.size = this.size + 1;
+        size++;
+        rear = (rear + 1) % capacity; data[rear] = item;
+        return true;
 
 
     }
@@ -47,7 +47,8 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
     public E peek() {
         if (size == 0) {
             return null;
-        } else () {
+        }
+        else {
             return data[front];
         }
     }
@@ -57,10 +58,15 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
         if (size == 0) {
             return null;
         }
-        E result = data[front]
+        E result = data[front];
+        front = (front + 1) % capacity;
+        size--;
+        return result;
+    }
+
 
         @Override
-        public boolean isEmpty (); {
+        public boolean isEmpty () {
             return this.size == 0;
         }
 
@@ -72,7 +78,7 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
         @Override
         public List<E> asList() {
             List<E> queueList = new ArrayList<>(this.capacity);
-            for (int i = front; i)
+            for (int i = front i)
                 while (front != null) {
                     queueList.add(front);
                     front = front;
@@ -82,5 +88,5 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
             return Arrays.asList();
         }
     }
-}
+
 // TODO implement using an ArrayList preallocated with the right size
