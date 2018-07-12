@@ -67,22 +67,24 @@ public class FixedArrayQueue<E> implements SimpleQueue<E> {
 
         @Override
         public boolean isEmpty () {
-            return this.size == 0;
+
+        return this.size == 0;
         }
 
         @Override
         public int size() {
-            return size;
+
+        return size;
         }
 
         @Override
         public List<E> asList() {
             List<E> queueList = new ArrayList<>(this.capacity);
-            for (int i : this.data)
+            for (E i : this.data)
                 queueList.add(i);
-    }
 
-            return List<E>;
+            return queueList;
+        }
 
 
         }
