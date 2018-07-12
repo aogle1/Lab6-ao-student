@@ -7,4 +7,4 @@
 - What happens when you poll an empty FixedArrayQueue?
   - Null is returned. 
 - What is the time and (extra) space complexity of each of the FixedArrayQueue methods?
-  - Since this is a circular array it is O(1).
+  - Accessing and searching the queue is O(n), queue insertion and deletion are O(1).
